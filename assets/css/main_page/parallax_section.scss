@@ -1,0 +1,47 @@
+
+.paralax h2{
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    color:#ffffff;
+    margin-top: 42px;
+}
+.paralax .parallax_heading{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    color:#ffffff;
+}
+.paralax .bgc_white{
+    background-color: #fff;
+
+
+}
+
+.paralax .bgc_white .red{
+    color:red;
+}
+.paralax .bgc_white .grey{
+    color:grey;
+}
+.paralax ul{
+    margin-top: 42px;
+}
+.paralax ul li{
+    max-width: 248px;
+    margin-left: 2.7%;
+
+}
+
+.paralax ul li .red{
+    padding:20px;
+
+}
+.paralax ul .first{
+    margin-left: 1%;
+}
+.paralax ul li img{
+    max-width: 100%;
+    height: auto;
+}

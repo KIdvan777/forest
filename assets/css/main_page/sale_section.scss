@@ -1,0 +1,21 @@
+.sale .sale_inner{
+    position: absolute;
+    top:25%;
+    left:15%;
+}
+
+.sale .sale_inner span{
+    display: block;
+    font-size:4rem;
+    font-weight: bold;
+    color:#D32241;
+    line-height: 1;
+}
+.sale .sale_inner .black{
+    font-weight: 400;
+    color:#000000;
+}
+.sale .sale_inner .jacket{
+    text-transform: lowercase;
+    font-weight: bold;
+}

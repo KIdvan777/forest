@@ -1,0 +1,25 @@
+// variabales
+@import 'variables/variables';
+// mixins
+@import 'mixins/base_mixins';
+@import 'mixins/media_querys';
+// base
+@import 'base/base';
+// header
+@import 'headers/header_1';
+// banner section
+@import 'main_page/main_banner';
+// Features section
+@import 'main_page/feauters_section';
+// slide gallery
+@import 'main_page/slide_gallery';
+// Paralax section
+@import 'main_page/parallax_section';
+// Duo section
+@import 'main_page/duo_section';
+// Sale secttion
+@import 'main_page/sale_section';
+// Section brands
+@import 'main_page/brands_section';
+// footer
+@import 'footers/footer';
