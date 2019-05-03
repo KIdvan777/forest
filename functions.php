@@ -160,9 +160,7 @@ add_action( 'widgets_init', 'forest_widgets_init' );
 function forest_scripts() {
 	wp_enqueue_style( 'forest-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'forest-bts-cdn', 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' );
-	wp_enqueue_style( 'forest-fw-cdn',"https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-
- );
+	wp_enqueue_style( 'forest-fw-cdn',"https://use.fontawesome.com/releases/v5.8.1/css/all.css");
 	wp_enqueue_script( 'forest-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'forest-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
@@ -187,6 +185,11 @@ require get_template_directory() . '/inc/template-tags.php';
  * Functions which enhance the theme by hooking into WordPress.
  */
 require get_template_directory() . '/inc/template-functions.php';
+
+/**
+ * Customizer panels.
+ */
+require get_template_directory() . '/inc/customizer/FPE/forest_panel.php';
 
 /**
  * Customizer additions.

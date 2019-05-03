@@ -1,11 +1,36 @@
-header{
+.m_l{
+    margin-left:20px;
+}
+
+.header_one{
     .top_header_bgc{
         background-color: #000;
+        padding-top: 10px;
+        padding-bottom: 10px;
         color:#fff;
+        .top_header_left{
+            .info_desc{
+                .top_header_hotline_text{
+                    display: inline-block;
+                    margin-right: 20px;
+                }
+            }
+            .top_header_social_icons{
+                .nav{
+                    li{
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
     }
     .nav{
         li{
             list-style: none;
+            color:#fff;
+            a{
+                color:#fff;
+            }
         }
     }
     .main_header{
@@ -16,10 +41,41 @@ header{
             .nav{
                 li{
                     margin-left: 20px;
+                    text-transform: uppercase;
                     color:#fff;
                     font-weight: bold;
                     font-size: 1rem;
+                    .sub-menu{
+                        display:none;
+                        background-color: #fff;
+                    }
+
+                }li:hover{
+                    .sub-menu{
+                        display:inline-block;
+                        min-width: 300px;
+                        background-color: #fff;
+                        padding: 10px;
+                        position: absolute;
+                        li,.img_item{
+                            display: flex;
+                            a{
+                                color:#000;
+
+                                img{
+
+                                }
+                            }
+                        }
+                    }
                 }
+
+            }
+            .n_nav{
+                li{
+                    color:#e2e;
+                }
+
             }
         }
         .logo{
@@ -29,7 +85,11 @@ header{
             font-weight: bold;
             font-size: 1rem;
         }
+        .main_header_search{
+            position: absolute;
+            display: none;
 
+        }
     }
     img{
         width: 100%;

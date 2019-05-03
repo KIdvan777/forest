@@ -241,3 +241,4 @@ require get_template_directory() . '/inc/customizer/headers/headers.php';
 require get_template_directory() . '/inc/customizer/sections/sections.php';
 
 require get_template_directory() . '/inc/customizer/footers/footers.php';
+require get_template_directory() . '/inc/customizer/menus/menus_settings.php';

@@ -15,12 +15,6 @@ function forest_custom_sections_register($wp_customize) {
         'panel'=>'forest_sections_panel',
     ]);
 
-    $wp_customize->add_section('forest_sections_one_section',[
-        'title'=>__('Forest sections one', 'forest'),
-        'priority'=>11,
-        'panel'=>'forest_sections_pannel',
-    ]);
-
     $wp_customize->add_setting( 'forest_sections_settings', array(
         'transport'=>'refresh'
     ));
@@ -43,24 +37,6 @@ function forest_custom_sections_register($wp_customize) {
         )
     );
 
-    $wp_customize->add_control(new WP_Customize_Control(
-        $wp_customize,
-        'forest_section_one_control',
-            array(
-                'label'          => __( 'Forest section one', 'theme_name' ),
-                'section'        => 'forest_section_one_section',
-                'settings'       => 'forest_section_settings',
-                'type'           => 'radio',
-                'choices'        => array(
-                    'one'   => __( 'Header-1' ),
-                    'two'  => __( 'Header-2' ),
-                    'three'   => __( 'Header-3' ),
-                    'four'  => __( 'Header-4' )
-                )
-            )
-        )
-    );
-
 }
 
 add_action('wp_head','forest_customize_sections_options');
@@ -72,3 +48,5 @@ function forest_customize_sections_options(){
 }
 require get_template_directory() . '/inc/customizer/sections/blog/blog.php';
 require get_template_directory() . '/inc/customizer/sections/about/about.php';
+require get_template_directory() . '/inc/customizer/sections/introduction/intro.php';
+require get_template_directory() . '/inc/customizer/sections/portfolio/portfolio.php';

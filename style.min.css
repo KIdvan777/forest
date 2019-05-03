@@ -5,12 +5,22 @@ img{max-width:100%;height:auto}
 .flex-container{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}
 .wrap{-ms-flex-wrap:wrap;flex-wrap:wrap}
 .space_between{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
-header .top_header_bgc{background-color:#000;color:#fff}
-header .nav li{list-style:none}
-header .main_header .main_nav{position:absolute;padding-top:20px;left:600px}
-header .main_header .main_nav .nav li{margin-left:20px;color:#fff;font-weight:bold;font-size:1rem}
-header .main_header .logo{position:absolute;padding-top:20px;color:#fff;font-weight:bold;font-size:1rem}
-header img{width:100%;height:auto}
+.m_l{margin-left:20px}
+.header_one .top_header_bgc{background-color:#000;padding-top:10px;padding-bottom:10px;color:#fff}
+.header_one .top_header_bgc .top_header_left .info_desc .top_header_hotline_text{display:inline-block;margin-right:20px}
+.header_one .top_header_bgc .top_header_left .top_header_social_icons .nav li{margin-right:10px}
+.header_one .nav li{list-style:none;color:#fff}
+.header_one .nav li a{color:#fff}
+.header_one .main_header .main_nav{position:absolute;padding-top:20px;left:600px}
+.header_one .main_header .main_nav .nav li{margin-left:20px;text-transform:uppercase;color:#fff;font-weight:bold;font-size:1rem}
+.header_one .main_header .main_nav .nav li .sub-menu{display:none;background-color:#fff}
+.header_one .main_header .main_nav .nav li:hover .sub-menu{display:inline-block;min-width:300px;background-color:#fff;padding:10px;position:absolute}
+.header_one .main_header .main_nav .nav li:hover .sub-menu li,.header_one .main_header .main_nav .nav li:hover .sub-menu .img_item{display:-webkit-box;display:-ms-flexbox;display:flex}
+.header_one .main_header .main_nav .nav li:hover .sub-menu li a,.header_one .main_header .main_nav .nav li:hover .sub-menu .img_item a{color:#000}
+.header_one .main_header .main_nav .n_nav li{color:#e2e}
+.header_one .main_header .logo{position:absolute;padding-top:20px;color:#fff;font-weight:bold;font-size:1rem}
+.header_one .main_header .main_header_search{position:absolute;display:none}
+.header_one img{width:100%;height:auto}
 .padding-top{padding-top:42px}
 .padding-bottom{padding-bottom:42px}
 .features_wrap{display:-webkit-box;display:-ms-flexbox;display:flex}
