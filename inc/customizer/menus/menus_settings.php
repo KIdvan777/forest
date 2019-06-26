@@ -12,7 +12,6 @@ function forest_custom_header_1_menu_1_register($wp_customize) {
     ]);
 
     $wp_customize->add_setting( 'forest_headers_1_menu_1_setting', array(
-        'default'=>'Menu-1',
         'transport'=>'refresh'
     ));
 

@@ -20,7 +20,7 @@ get_header();
 
 
 ?>
-<?php echo get_theme_mod('width_setting'); ?>
+<!-- <?php echo get_theme_mod('width_setting'); ?> -->
 
 <h1 class="site-title">
 

@@ -1,80 +1,20 @@
 <?php
 
-add_action( 'customize_register', 'forest_custom_headers_register' );
-function forest_custom_headers_register($wp_customize) {
+function forest_customizer_headers_register($wp_customize){
+// Has to be at the top
+  $wp_customize->register_panel_type( 'PE_WP_Customize_Panel' );
+  $wp_customize->register_section_type( 'PE_WP_Customize_Section' );
 
-    $wp_customize->add_panel('forest_headers_pannel',array(
-        'title'=>' Forest Headers',
-        'description'=> 'This is panel Description',
-        'priority'=> 10,
-    ));
 
-    $wp_customize->add_section('forest_headers_section',[
-        'title'=>__('Forest headers options', 'forest'),
-        'priority'=>10,
-        'panel'=>'forest_headers_pannel',
-    ]);
-
-    $wp_customize->add_setting( 'forest_headers_settings', array(
-        'transport'=>'refresh'
-    ));
-
-    $wp_customize->add_control(new WP_Customize_Control(
-        $wp_customize,
-        'forest_headers_control',
-            array(
-                'label'          => __( 'Choose header', 'theme_name' ),
-                'section'        => 'forest_headers_section',
-                'settings'       => 'forest_headers_settings',
-                'type'           => 'radio',
-                'choices'        => array(
-                    '1'   => __( 'Header-1' ),
-                    '2'  => __( 'Header-2' ),
-                    '3'   => __( 'Header-3' ),
-                    '4'  => __( 'Header-4' )
-                )
-            )
-        )
-    );
-
-    $wp_customize->add_control(new WP_Customize_Control(
-        $wp_customize,
-        'forest_headers_control',
-            array(
-                'label'          => __( 'Choose header', 'theme_name' ),
-                'section'        => 'forest_headers_section',
-                'settings'       => 'forest_headers_settings',
-                'type'           => 'radio',
-                'choices'        => array(
-                    '1'   => __( 'Header-1' ),
-                    '2'  => __( 'Header-2' ),
-                    '3'   => __( 'Header-3' ),
-                    '4'  => __( 'Header-4' )
-                )
-            )
-        )
-    );
+  $headers_panel = new PE_WP_Customize_Panel($wp_customize, 'lvl_1_parent_panel', array(
+    'title'=>'Forest Headers',
+    'priority'=>5,
+  ));
+  $wp_customize->add_panel($headers_panel);
+require get_template_directory() . '/inc/customizer/headers/header_1/header_1.php';
+require get_template_directory() . '/inc/customizer/headers/header_2/header_2.php';
+require get_template_directory() . '/inc/customizer/headers/header_3/header_3.php';
+require get_template_directory() . '/inc/customizer/headers/header_4/header_4.php';
 
 }
-
-add_action('wp_head','forest_customize_headers_options');
-function forest_customize_headers_options(){
-
-    $header =  get_theme_mod('forest_headers_settings');
-
-    if($header=='1'){
-        get_template_part('/inc/customizer/headers/templates/header_1');
-    }
-    if($header=='2'){
-        get_template_part('/inc/customizer/headers/templates/header_2');
-    }
-    if($header=='3'){
-        get_template_part('/inc/customizer/headers/templates/header_3');
-    }
-    if($header=='4'){
-        get_template_part('/inc/customizer/headers/templates/header_4');
-    }
-
-}
-
-require get_template_directory() . '/inc/customizer/headers/header_settings_1.php';
+add_action( 'customize_register', 'forest_customizer_headers_register' );
